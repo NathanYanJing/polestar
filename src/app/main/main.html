@@ -76,10 +76,16 @@
         always-scrollable="true"
       ></vl-plot-group>
       <div class="abs-100 empty-vis card no-top-margin" ng-show="Spec.isEmptyPlot">
-        No specified visualization yet.  Start exploring by dragging a field to
-        encoding pane on the left.
+        No specified visualization yet.
+        <!--Start exploring by dragging a field to encoding pane on the left.-->
       </div>
     </div>
+  </div>
+
+
+<!--Summary of the workflow in the front end-->
+  <div id="log_download" style="display: none;">
+
   </div>
 
   <div class="hflex full-width dev-panel" ng-if="showDevPanel">
@@ -87,7 +93,8 @@
       <div class="card">
         <div>userid: {{Logger.userid}}</div>
         <button ng-click="Logger.clear()">Clear logs</button><br/>
-        <button ng-click="Logger.export()">Download logs</button>
+<!--change the button id for the robot-->
+        <button name="log_download" ng-click="Logger.export()">Download logs</button>
       </div>
     </div>
     <div class="pane config-pane">
